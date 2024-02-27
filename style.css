@@ -1,0 +1,139 @@
+body {
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #636363;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.slider>.slide{
+width: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.logo>img {
+  width: 100px;
+  max-width: 100%;
+}
+
+main {
+  margin-top: 20px;
+}
+
+/* .slider {
+  display: flex;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.slider img:hover {
+  transform: scale(1.1);
+} */
+
+.container{
+  margin: auto;
+  background-color: white;
+  width: 800px;
+  padding: 30px;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider{
+  position: relative;
+  width: 800px;
+  height: 300px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+ul.slider li img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+/* Estilo básico para el Slider*/
+#gallery {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallery-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Navegación del Slider */
+.gallery-navigation {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -10px;
+}
+
+.nav-button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+background-color: #005f5f;
+}
+
+footer{
+  background: black;
+  color: white;
+}
+
+.card{
+
+}
