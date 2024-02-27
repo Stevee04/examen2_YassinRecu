@@ -5,49 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
 </head>
 <body>
   <header>
     <div class="logo">
       <img src="img/logo smbf.png" alt="Logo">
-    <nav>
-      <ul>
-        <a href="categories.html">Category</a>
-        <a href="form.html">Form</a>
-        <a href="#">Search</a>
-      </ul>
-    </nav>
-  </div>
+      <nav>
+        <ul>
+          <li><a href="categories.html">Category</a></li>
+          <li><a href="form.html">Form</a></li>
+          <li><a href="#">Search</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   
   <main>
-    <section id="gallery">
-      <div class="gallery-container">
-          <figure class="gallery-item">
-              <img src="./img/satoru.jpg" alt="Imagen 1">
-              <figcaption>Jujutsu Kaisen</figcaption>
-          </figure>
-          <figure class="gallery-item">
-              <img src="./img/sukuna.jpg" alt="Imagen 2">
-              <figcaption>Jujutsu Kaisen</figcaption>
-          </figure>
-          <figure class="gallery-item">
-              <img src="./img/dragonball.jpg" alt="Imagen 3">
-              <figcaption>Dragon Ball</figcaption>
-          </figure>
-          <!-- ... otras imágenes ... -->
-      </div>
-      <nav class="gallery-navigation">
-          <button class="nav-button prev-button">Anterior</button>
-          <button class="nav-button next-button">Siguiente</button>
-      </nav>
-  </section>
+    <div class="carousel">
+      <div><img src="./img/satoru.jpg" alt="Satoru"></div>
+      <div><img src="./img/sukuna.jpg" alt="Sukuna"></div>
+      <div><img src="./img/dragonball.jpg" alt="Dragon Ball"></div>
+    </div>
 
-  <section>
-      <div class="row">
+    <section>
+      <div class="container-body">
         <div class="card">
           <img src="img/josee.png" alt="Image 1">
           <h2>Roleplay 1</h2>
@@ -59,43 +42,26 @@
           <p>Personaje Roleplay 2.</p>
         </div>
         <div class="card">
-          <img src="img/unknown3.png" alt="Image 3">
+          <img src="img/vagos.png" alt="Image 3">
           <h2>Roleplay 3</h2>
           <p>Personaje Roleplay 3.</p>
         </div>
       </div>
-  </section>
-
+    </section>
   </main>
+
   <footer class="centrar">
     <h2>About Us</h2>
-    <p>We are a company that provides...</p>
-    <p>We have been in business for...</p>
-    <p>We are located in...</p>
-    <p>Copyright 2023 Our Company</p>
+    <div class="footer-class">
+      <p>We are a company that provides...</p>
+      <p>We have been in business for...</p>
+      <p>We are located in...</p>
+      <p>Copyright 2023 Our Company</p>
+    </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
-
-<script>
-  let currentIndex = 0;
-  
-  document.querySelector('.prev-button').addEventListener('click', () => {
-     navigate(-1);
-  });
-  
-  document.querySelector('.next-button').addEventListener('click', () => {
-     navigate(1);
-  });
-  
-  function navigate(direction) {
-     const galleryContainer = document.querySelector('.gallery-container');
-     const totalImages = document.querySelectorAll('.gallery-item').length;
-  
-     currentIndex = (currentIndex + direction + totalImages) % totalImages;
-     const offset = -currentIndex * 100;
-  
-     galleryContainer.style.transform = `translateX(${offset}%)`;
-  }
-  </script>
-
 </html>
